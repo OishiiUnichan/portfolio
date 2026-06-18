@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <title>鑑賞ログ</title>
+</head>
+
+<body>
+  <h1>鑑賞ログ</h1>
+  <a href="/new">＋ 登録</a>
+
+  <table>
+    <thead>
+      <tr>
+        <th>日付</th>
+        <th>タイトル</th>
+        <th>削除</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr th:each="movie : ${movies}">
+        <td th:text="${movie.watchDate}"></td>
+        <td th:text="${movie.title}"></td>
+        <td>
+          <form th:action="@{/delete/{id}(id=${movie.id})}" method="post">
+            <button type="submit" onclick="return confirm(movie.title + 'を削除しますか？')">削除</button>
+          </form>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+
+</html>
