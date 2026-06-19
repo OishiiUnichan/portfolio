@@ -1,3 +1,5 @@
+package janken;
+
 import java.util.Scanner;
 
 public class InputHelper {
@@ -5,11 +7,12 @@ public class InputHelper {
   public static final int VALID = 0;
   public static final int INVALID_NUMBER = 1;
   public static final int INVALID_VALUE = 2;
+  
+  //入力を1回で済ませる
+  private final Scanner sc = new Scanner(System.in);
 
   // モード選択
   public int inputMode() {
-    Scanner sc = new Scanner(System.in);
-
     String input = sc.nextLine();
     int result = inputCheck(input, 0, 1);
 
@@ -28,8 +31,6 @@ public class InputHelper {
 
   // 手の入力
   public int inputHand() {
-    Scanner sc = new Scanner(System.in);
-
     String input = sc.nextLine();
     int result = inputCheck(input, 0, 2);
 
@@ -48,14 +49,12 @@ public class InputHelper {
 
   // 名前の入力
   public String inputName() {
-    Scanner sc = new Scanner(System.in);
     String name = sc.nextLine();
     return name;
   }
 
   // PC番号の入力
   public int inputNumber() {
-    Scanner sc = new Scanner(System.in);
     String input = sc.nextLine();
     int result = inputCheck(input, 1, Integer.MAX_VALUE);
     while (result != 0) {

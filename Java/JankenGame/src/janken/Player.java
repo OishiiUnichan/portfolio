@@ -1,3 +1,5 @@
+package janken;
+
 public abstract class Player {
   // フィールド
   String name;

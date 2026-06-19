@@ -1,3 +1,5 @@
+package janken;
+
 import java.util.List;
 
 public class GameManager {

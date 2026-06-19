@@ -1,3 +1,5 @@
+package janken;
+
 public class HumanPlayer extends Player {
 
   // Playerのコンストラクタ引き継ぐ

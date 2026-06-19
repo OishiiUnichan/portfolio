@@ -1,7 +1,8 @@
+package janken;
 import java.util.ArrayList;
 import java.util.List;
 
-public class JankenGame {
+public class Main {
   public static void main(String[] args) {
     // ゲーム文表示
     System.out.println("*** じゃんけんゲーム ***");

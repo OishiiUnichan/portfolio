@@ -1,3 +1,5 @@
+package janken;
+
 import java.util.Random;
 
 public class PCPlayer extends Player{
